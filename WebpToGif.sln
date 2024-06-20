@@ -5,6 +5,8 @@ VisualStudioVersion = 17.6.33712.159
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebpToGif_GUI", "WebpToGif_GUI\WebpToGif_GUI.csproj", "{FCAB4893-58E3-43A2-8AA1-C681C0004A6F}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "setup", "setup\setup.vdproj", "{9F6B7B6B-9CF2-4D9A-9C66-E08BC29DF544}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,9 +14,11 @@ Global
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{FCAB4893-58E3-43A2-8AA1-C681C0004A6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FCAB4893-58E3-43A2-8AA1-C681C0004A6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FCAB4893-58E3-43A2-8AA1-C681C0004A6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FCAB4893-58E3-43A2-8AA1-C681C0004A6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F6B7B6B-9CF2-4D9A-9C66-E08BC29DF544}.Debug|Any CPU.ActiveCfg = Debug
+		{9F6B7B6B-9CF2-4D9A-9C66-E08BC29DF544}.Release|Any CPU.ActiveCfg = Release
+		{9F6B7B6B-9CF2-4D9A-9C66-E08BC29DF544}.Release|Any CPU.Build.0 = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
