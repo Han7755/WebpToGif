@@ -32,6 +32,7 @@
             textBox1 = new TextBox();
             openFileDialog1 = new OpenFileDialog();
             fileSelectButton = new Button();
+            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             SuspendLayout();
             // 
             // ConvertButton
@@ -46,16 +47,18 @@
             // 
             // textBox1
             // 
-            textBox1.Enabled = false;
             textBox1.Location = new Point(12, 12);
+            textBox1.Multiline = true;
             textBox1.Name = "textBox1";
             textBox1.ReadOnly = true;
+            textBox1.ScrollBars = ScrollBars.Vertical;
             textBox1.Size = new Size(290, 23);
             textBox1.TabIndex = 1;
             // 
             // openFileDialog1
             // 
-            openFileDialog1.Filter = "webp 파일|*.webp|모든 파일|*.*";
+            openFileDialog1.Filter = "webp 파일|*.webp";
+            openFileDialog1.Multiselect = true;
             // 
             // fileSelectButton
             // 
@@ -67,16 +70,27 @@
             fileSelectButton.UseVisualStyleBackColor = true;
             fileSelectButton.Click += fileSelectButton_Click;
             // 
+            // backgroundWorker1
+            // 
+            backgroundWorker1.WorkerReportsProgress = true;
+            backgroundWorker1.DoWork += backgroundWorker1_DoWork;
+            // 
             // Form1
             // 
+            AllowDrop = true;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(346, 74);
             Controls.Add(fileSelectButton);
             Controls.Add(textBox1);
             Controls.Add(ConvertButton);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
             Name = "Form1";
+            ShowIcon = false;
             Text = "webp to gif ";
+            DragDrop += Form1_DragDrop;
+            DragEnter += Form1_DragEnter;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -87,5 +101,6 @@
         private TextBox textBox1;
         private OpenFileDialog openFileDialog1;
         private Button fileSelectButton;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
